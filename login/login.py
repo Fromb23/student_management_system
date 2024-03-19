@@ -4,7 +4,8 @@ import getpass
 import sys
 import csv
 from user_details import user_details
-
+from menu import print_menu
+from my_profile import view_profile
 def login():
     print("Welcome to Module and Student system")
     attempts = 0
@@ -37,6 +38,12 @@ def login():
                         print("password match")
                         userName, status = user_details(userName)
                         print('You are logged in as '+ " "+ userName + ", " + "Account status is " + status + "...")
+                        print()
+                        print_menu()
+                        select_option = int(input("Select menu from the above options...: "))
+                        if select_option == 1:
+                            view_profile(userName)
+                                
                         right_password = True
                         break;
                 if right_password:
