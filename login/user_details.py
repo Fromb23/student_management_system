@@ -8,5 +8,5 @@ def user_details(userName):
 
         for row in user_info:
             if row['username'] == userName:
-                userName, userStatus = row['username'], row['status']
-                return userName, userStatus
+                userName, userStatus, usertype = row['username'], row['status'], row['usertype']
+                return userName, userStatus, usertype

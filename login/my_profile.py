@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import csv
+from menu import print_menu
 
 def view_profile(userName):
     with open('userInfo.csv', 'r', newline='') as csvfile:
@@ -8,5 +9,8 @@ def view_profile(userName):
 
         for row in _profile:
             if row['username'] == userName:
-                profile_list = list(row.items())
-                print(profile_list)
+                for key, value in row.items():
+                    print(f"{key}: {value}")
+    main_menu = input("To return to main menu, press 'y': ")
+    if main_menu == 'y':
+        print_menu()

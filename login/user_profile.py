@@ -9,6 +9,7 @@ def user_profile():
             ] 
     with open('userInfo.csv', 'a', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=field_names)
+        print(writer)
 
         writer.writeheader()
 

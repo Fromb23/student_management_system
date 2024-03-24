@@ -1,3 +1,2 @@
-username,modules,password,usertype,status
-Fromb,computer Science,Fromb@2024,Student,Active
-Wamae,Software Engineering,Wamae2024,Lecturer,Active
+username,password,usertype,status
+Fromb,Fro,Lecturer,Active
